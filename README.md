@@ -1,7 +1,3 @@
-Here's a template for your README file:
-
----
-
 # Waste Classification Project
 
 ## Overview
@@ -63,6 +59,4 @@ python waste_classification.py
 - Implementing advanced techniques such as Transfer Learning using pre-trained models.
 - Expanding the dataset for better diversity and model performance.
 
----
 
-Feel free to modify this as you need!
