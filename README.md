@@ -1,62 +1,43 @@
-# Waste Classification Project
+# Waste Classification Using CNN
 
-## Overview
-This project is focused on classifying waste materials into two categories: **Organic** and **Recyclable**. The dataset used for this project contains images of different waste items, and the goal is to classify these items based on their category using a convolutional neural network (CNN).
+This project aims to classify waste images into **Organic** or **Recyclable** categories using a Convolutional Neural Network (CNN). The model is trained on the [TechSash Waste Classification Dataset](https://www.kaggle.com/techsash/waste-classification-data) from Kaggle.
 
-The project follows a structured approach, with progress made in two stages:
-- **Week 1**: Label visualization using a pie chart.
-- **Week 2**: Model creation, training, and implementation of early stopping to prevent overfitting.
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [Dataset](#dataset)
+3. [Model Architecture](#model-architecture)
+4. [Training](#training)
+5. [Results](#results)
+6. [Deployment](#deployment)
+7. [How to Run](#how-to-run)
+
+## Project Overview
+- **Objective**: Automate waste classification using deep learning.
+- **Tools Used**: TensorFlow/Keras, OpenCV, Pandas, NumPy, Matplotlib.
+- **GitHub Repo**: [Insert GitHub Repository Link Here]
 
 ## Dataset
-The dataset used for this project is available on [Kaggle: Waste Classification Data](https://www.kaggle.com/datasets/techsash/waste-classification-data). This dataset contains images categorized as **Organic** and **Recyclable**, which are used for training the model.
+- Source: [TechSash Waste Classification Dataset](https://www.kaggle.com/techsash/waste-classification-data).
+- Contains 25,000 images split into TRAIN and TEST sets.
+- Balanced dataset with 50.63% Organic and 49.37% Recyclable images.
 
-## Project Structure
+## Model Architecture
+- **CNN Layers**: 3 Convolutional Layers (32, 64, 128 filters) + MaxPooling.
+- **Fully Connected Layers**: 256 and 64 neurons with Dropout.
+- **Output Layer**: Sigmoid activation for binary classification.
 
-- **Week 1**: 
-  - Visualized the distribution of labels (Organic and Recyclable) in the dataset using a pie chart.
-  - Ensured that data was properly preprocessed, with each category being labeled and ready for model training.
-  
-- **Week 2**: 
-  - Created a CNN model with multiple convolutional layers.
-  - Applied data augmentation using `ImageDataGenerator`.
-  - Implemented early stopping to avoid overfitting during model training.
-  - Trained the model using the provided dataset and validated using a test set.
-
-## Libraries Used
-- **TensorFlow** for model building and training.
-- **Keras** for deep learning components such as layers and callbacks.
-- **OpenCV** for image preprocessing.
-- **Matplotlib** for visualization (used for pie chart and image display).
-- **Pandas** for data handling and management.
-
-## Installation
-To run this project, you need to have the following libraries installed:
-```bash
-pip install tensorflow opencv-python matplotlib pandas tqdm kaggle
-```
-
-## How to Run
-1. Download the dataset from [here](https://www.kaggle.com/datasets/techsash/waste-classification-data) and store it in the proper directory.
-2. Make sure that the dataset is extracted and correctly placed in the `/TRAIN` and `/TEST` folders.
-3. Execute the code in a Python environment with TensorFlow and the required libraries.
-
-```bash
-python waste_classification.py
-```
+## Training
+- **Optimizer**: Adam.
+- **Loss Function**: Binary Cross-Entropy.
+- **Early Stopping**: Patience=20 to prevent overfitting.
+- Achieved ~90% validation accuracy.
 
 ## Results
-- **Week 1**: Successful creation of label visualization in the form of a pie chart.
-- **Week 2**: Successful model training with early stopping and data augmentation.
+- Training and validation curves show minimal overfitting.
+- Model successfully classifies waste images into Organic or Recyclable categories.
 
-## Improvements
-- In Week 2, the project was enhanced by:
-  - Creating a deeper CNN model for better accuracy.
-  - Implementing early stopping to prevent overfitting during the training phase.
-  - Including data augmentation to improve model generalization.
+## Deployment
+The model can be deployed using Streamlit for real-time waste classification. Use the following code to run the Streamlit app:
 
-## Future Work
-- Improving model accuracy by fine-tuning hyperparameters.
-- Implementing advanced techniques such as Transfer Learning using pre-trained models.
-- Expanding the dataset for better diversity and model performance.
-
-
+```bash
+streamlit run app.py
