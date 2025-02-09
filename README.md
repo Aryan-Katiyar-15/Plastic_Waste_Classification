@@ -14,7 +14,6 @@ This project aims to classify waste images into **Organic** or **Recyclable** ca
 ## Project Overview
 - **Objective**: Automate waste classification using deep learning.
 - **Tools Used**: TensorFlow/Keras, OpenCV, Pandas, NumPy, Matplotlib.
-- **GitHub Repo**: [Insert GitHub Repository Link Here]
 
 ## Dataset
 - Source: [TechSash Waste Classification Dataset](https://www.kaggle.com/techsash/waste-classification-data).
