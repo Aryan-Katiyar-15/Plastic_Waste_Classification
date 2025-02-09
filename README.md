@@ -18,8 +18,8 @@ This project aims to classify waste images into **Organic** or **Recyclable** ca
 
 ## Dataset
 - Source: [TechSash Waste Classification Dataset](https://www.kaggle.com/techsash/waste-classification-data).
-- Contains 25,000 images split into TRAIN and TEST sets.
-- Balanced dataset with 50.63% Organic and 49.37% Recyclable images.
+- Contains 22,500 images split into TRAIN and TEST sets.
+- Balanced dataset with 55.69% Organic and 44.31% Recyclable images.
 
 ## Model Architecture
 - **CNN Layers**: 3 Convolutional Layers (32, 64, 128 filters) + MaxPooling.
@@ -41,3 +41,22 @@ The model can be deployed using Streamlit for real-time waste classification. Us
 
 ```bash
 streamlit run app.py
+
+
+
+How to Run
+
+    Clone the repository:
+    bash
+
+    git clone [https://github.com/Aryan-Katiyar-15/Waste_Classification.git]
+
+    Install dependencies:
+    bash
+
+    pip install -r requirements.txt
+
+    Run the Streamlit app:
+    bash
+
+    streamlit run app.py
